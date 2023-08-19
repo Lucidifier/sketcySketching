@@ -7,7 +7,7 @@ function getUserGrid() {
 let userGridSize = getUserGrid();
 console.log(userGridSize);
 
-let n = ((800 / userGridSize)-2) + 'px';
+let n = ((600 / userGridSize)-2) + 'px';
 console.log(n);
 
 //CREATE GRID
@@ -20,17 +20,16 @@ function createGrid () {
 		tempDiv.style.height = (n);
 		divContainerItem.appendChild(tempDiv);
 
+		//RANDOM COLOR GENERATOR
 		let randomColor;
 		function getRandomColor() {
 			function getRandomRGB () {
 				return Math.round(0 + Math.random() * (255-0));
 			}
 			randomColor = 'rgb(' + getRandomRGB() + ', ' + getRandomRGB() + ', ' + getRandomRGB() + ')';
-			console.log(randomColor); 
 			return randomColor;
 		}
 		getRandomColor();
-		console.log(randomColor); 
 
 		//HOVER EFFECT
 		function changeColorHover(box) {
@@ -40,7 +39,7 @@ function createGrid () {
 	}
 }
 
-//RANDOM COLOR GENERATOR
+
 
 
 
