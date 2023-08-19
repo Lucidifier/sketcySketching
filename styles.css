@@ -7,16 +7,22 @@ body {
   display: flex;
   flex-direction: column;
   border: 1px solid red;
-  width: 1200px;
+  width: 850px;
    position: absolute;
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%);
+   background-color: #ca282c;
+   border: 20px solid #e89c1e;
+   border-radius: 10px;
 }
 
 .title-container {
   border: 1px solid red;
   text-align: center;
+  font-family: "Courier New", monospace;
+  font-size: 60px;
+  color: #293646
 }
 
 .input-btn-container {
@@ -24,7 +30,9 @@ body {
 }
 
 .grid-container {
-  border: 3px solid blue;
+  border: 10px solid #e89c1e;
+  border-radius: 10px;
+  background-color: #C0C0C0;
     display: flex;
     width: 600px;
     height: 600px;
@@ -38,7 +46,7 @@ body {
 .sketch-box {
     /* width: 50px;
     height: 50px; */
-    border: 1px solid red;
+    border: 1px solid #808080;
     margin: 0;
     padding: 0;
 }
