@@ -12,7 +12,7 @@ console.log(n);
 
 //CREATE GRID
 function createGrid () {
-	let divContainerItem = document.querySelector('.container-div');
+	let divContainerItem = document.querySelector('.grid-container');
 	for (let i = 0; i < userGridSize * userGridSize; i++) {
 		let tempDiv =	document.createElement('div');
 		tempDiv.classList.toggle('sketch-box');

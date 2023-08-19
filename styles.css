@@ -3,7 +3,27 @@ body {
     background-color: #A0A0A0; 
 }
 
-.container-div {
+.object-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  width: 1200px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.title-container {
+  border: 1px solid red;
+  text-align: center;
+}
+
+.input-btn-container {
+  align-self: center;
+}
+
+.grid-container {
   border: 3px solid blue;
     display: flex;
     width: 600px;
@@ -11,10 +31,8 @@ body {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    position: absolute;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%, -50%);
+    align-self: center;
+   
 }
 
 .sketch-box {
@@ -23,4 +41,25 @@ body {
     border: 1px solid red;
     margin: 0;
     padding: 0;
+}
+
+.function-btn-container {
+  height: 100px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 500px;
+}
+
+.function-btn-1 {
+  width: 75px;
+  height: 75px;
+  border: 1px solid red;
+}
+
+.function-btn-2 {
+  width: 75px;
+  height: 75px;
+  border: 1px solid red;
 }
