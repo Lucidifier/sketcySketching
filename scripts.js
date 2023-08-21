@@ -31,6 +31,7 @@ function getRandomColor() {
 	}
 
 			//GRID SIZE BUTTON
+			function generateNewGrid() {
 			let gridSizeButton = document.querySelector('.grid-size-btn');
 			gridSizeButton.addEventListener('click', ()=> {
 				let tempDivNodeList = document.querySelectorAll('.sketch-box');
@@ -39,6 +40,7 @@ function getRandomColor() {
 				}
 				createGrid();
 			})
+		}
 
 //GET  USER GRID SIZE
 function getUserGrid() {
@@ -61,21 +63,23 @@ function createGrid () {
 		divContainerItem.appendChild(tempDiv);
 
 		changeColorRandom(tempDiv);
-	}
-			
-	}
+	}		
+}
 
-		// //GRID SIZE BUTTON
-		// let gridSizeButton = document.querySelector('.grid-size-btn');
-		// gridSizeButton.addEventListener('click', ()=> {
-		// 	tempDiv.remove();
-		// 	// createGrid();
-		// 	} 
-		// )
+//ERASER BUTTON
+function clearGrid() {
+	let clearButton = document.querySelector('.function-btn-2');
+	clearButton.addEventListener('click', ()=> {
+				let tempDivNodeList = document.querySelectorAll('.sketch-box');
+				for (let j=0; j<tempDivNodeList.length; j++) {
+					tempDivNodeList[j].style.backgroundColor = ('#C0C0C0');}
+})}
+
 		
 		createGrid16x16();
+		generateNewGrid();
+		clearGrid();
 	}
 
 	sketch();
 
-// createGrid();
