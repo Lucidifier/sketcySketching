@@ -21,8 +21,10 @@ function getRandomColor() {
 			let tempDivNodeList2 = document.querySelectorAll('.sketch-box');
 				for (let m=0; m<tempDivNodeList2.length; m++) {
 			if(modeChangeClickCounter == 0 | modeChangeClickCounter%2 == 0) {
+				modeChange.style.backgroundImage = ('url("./images/buttonblack-img.png")');
 				changeColorBlack(tempDivNodeList2[m]);
 			} else {
+				modeChange.style.backgroundImage = ('url("./images/buttonrgb-img.png")');
 				changeColorRandom(tempDivNodeList2[m]);
 			}
 		}
@@ -74,7 +76,6 @@ function getUserGrid() {
 
 //CREATE USER GRID
 function createGrid () {
-	modeChangeClickCounter = 0;
 	let userGridSize = getUserGrid();
 	let n2 = ((600 / userGridSize)-2) + 'px';
 
@@ -84,7 +85,11 @@ function createGrid () {
 		tempDiv.style.width = (n2);
 		tempDiv.style.height = (n2);
 		divContainerItem.appendChild(tempDiv);
-		changeColorBlack(tempDiv);
+		if(modeChangeClickCounter == 0 | modeChangeClickCounter%2 == 0) {
+			changeColorBlack(tempDiv);
+		} else {
+			changeColorRandom(tempDiv);
+		}
 	}		
 }
 
