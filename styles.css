@@ -6,32 +6,29 @@ body {
 .object-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   width: 850px;
    position: absolute;
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%);
-   background-color: #ca282c;
-   border: 20px solid #e89c1e;
+   background-color: #c12a00;
+   border: 20px solid #ee7002;
    border-radius: 10px;
 }
 
 .title-container {
-  border: 1px solid red;
   text-align: center;
   font-family: "Courier New", monospace;
-  font-size: 60px;
-  color: #293646;
+  font-size: 80px;
+  color: #fee100;
   font-weight: bolder;
-}
-
-.input-btn-container {
-  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: default;
 }
 
 .grid-container {
-  border: 10px solid #e89c1e;
+  border: 10px solid #ee7002;
   border-radius: 10px;
   background-color: #C0C0C0;
     display: flex;
@@ -52,18 +49,17 @@ body {
 
 .function-btn-container {
   height: 150px;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 500px;
+  gap: 200px;
   margin-bottom: -50px;
+  margin-top: -10px;
 }
 
 .function-btn-1 {
-  width: 60px;
-  height: 60px;
-  border: 1px solid red;
+  width: 80px;
+  height: 80px;
   background-color:#C0C0C0;
   border-radius: 25px;
   background-image: url('./images/buttonblack-img.png');
@@ -77,11 +73,33 @@ body {
   background-color: #808080;
 }
 
+.input-btn-container {
+  align-self: center;
+  margin: 0px;
+}
+
+.grid-size-btn {
+  background-color: #11a1e2;
+  border: none;
+  color: #fee100;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  height: 80px;
+  transition: background-color 0.1s;
+}
+
+.grid-size-btn:hover {
+  background-color: #0085b6;
+}
 
 .function-btn-2 {
-  width: 60px;
-  height: 60px;
-  border: 1px solid red;
+  width:80px;
+  height: 80px;
   border-radius: 20px;
   background-image: url('./images/eraser-img.png');
   background-size: contain;
@@ -99,9 +117,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 490px;
-  color: #293646;
+  gap: 550px;
+  color: #fee100;
   font-family: "Courier New", monospace;
   font-size: 25px;
   font-weight: bold;
+  margin-bottom: -10px;
+  cursor: default;
 }
