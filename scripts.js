@@ -1,6 +1,8 @@
 function sketch() {
 	let divContainerItem = document.querySelector('.grid-container');
 	let tempDiv;
+	let modeChange = document.querySelector('.function-btn-1');
+	let modeChangeClickCounter = 0;
 
 //RANDOM COLOR GENERATOR
 function getRandomColor() {
@@ -12,10 +14,31 @@ function getRandomColor() {
 	return randomColor;
 }
 
-	//HOVER EFFECT
+	//HOVER COLOR  MODE CHANGE
+	function modeSelector() {
+		modeChange.addEventListener('click', ()=> {
+			modeChangeClickCounter++;
+			let tempDivNodeList2 = document.querySelectorAll('.sketch-box');
+				for (let m=0; m<tempDivNodeList2.length; m++) {
+			if(modeChangeClickCounter == 0 | modeChangeClickCounter%2 == 0) {
+				changeColorBlack(tempDivNodeList2[m]);
+			} else {
+				changeColorRandom(tempDivNodeList2[m]);
+			}
+		}
+			 });
+		}
+	
+	//HOVER EFFECT  BLACK COLOR
+	function changeColorBlack (box) {
+		box.addEventListener('mouseenter', () => {box.style.backgroundColor = ('black')})
+	}
+
+	//HOVER EFFECT RANDOM COLOR
 	function changeColorRandom(box) {
 		box.addEventListener('mouseenter', () => {box.style.backgroundColor = getRandomColor()});
- 	}
+		}
+ 	
 
  	//CREATE STARTING 16X16 GRID
 	function createGrid16x16() {
@@ -26,7 +49,7 @@ function getRandomColor() {
 		tempDiv.style.width = (n1);
 		tempDiv.style.height = (n1);
 		divContainerItem.appendChild(tempDiv);
-		changeColorRandom(tempDiv);
+		changeColorBlack(tempDiv);
 		}
 	}
 
@@ -51,7 +74,7 @@ function getUserGrid() {
 
 //CREATE USER GRID
 function createGrid () {
-
+	modeChangeClickCounter = 0;
 	let userGridSize = getUserGrid();
 	let n2 = ((600 / userGridSize)-2) + 'px';
 
@@ -61,8 +84,7 @@ function createGrid () {
 		tempDiv.style.width = (n2);
 		tempDiv.style.height = (n2);
 		divContainerItem.appendChild(tempDiv);
-
-		changeColorRandom(tempDiv);
+		changeColorBlack(tempDiv);
 	}		
 }
 
@@ -79,7 +101,8 @@ function clearGrid() {
 		createGrid16x16();
 		generateNewGrid();
 		clearGrid();
-	}
+		modeSelector();
+}
 
 	sketch();
 
