@@ -22,7 +22,8 @@ body {
   text-align: center;
   font-family: "Courier New", monospace;
   font-size: 60px;
-  color: #293646
+  color: #293646;
+  font-weight: bolder;
 }
 
 .input-btn-container {
@@ -50,22 +51,57 @@ body {
 }
 
 .function-btn-container {
-  height: 100px;
+  height: 150px;
   border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 500px;
+  margin-bottom: -50px;
 }
 
 .function-btn-1 {
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: 60px;
   border: 1px solid red;
+  background-color:#C0C0C0;
+  border-radius: 25px;
+  background-image: url('./images/button-img.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.1s;
 }
 
+.function-btn-1:hover {
+  background-color: #808080;
+}
+
+
 .function-btn-2 {
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: 60px;
   border: 1px solid red;
+  border-radius: 20px;
+  background-image: url('./images/eraser-img.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #C0C0C0;
+  transition: background-color 0.1s;
+}
+
+.function-btn-2:hover {
+  background-color: #808080;
+}
+
+.function-btn-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 490px;
+  color: #293646;
+  font-family: "Courier New", monospace;
+  font-size: 25px;
+  font-weight: bold;
 }
